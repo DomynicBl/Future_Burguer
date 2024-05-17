@@ -1,0 +1,27 @@
+.Search > input {
+    width: 35%;
+    height: 25px;
+    border-radius: 5px;
+    padding: 9px 0px 9px 36px;
+    background-color: #EDEDED;
+    margin: 0px 13px 0px 0px;
+    border: 2px solid var(--cor-sombra);
+    transition: 0.5s;
+    background-image: url("../src/assets/Icones/Icone_Lupa.svg"); 
+    background-repeat: no-repeat;
+    background-position: 9px center;
+}
+
+.Search > input:focus{
+    background-image: url("../src/assets/Icones/Icone_Lupa2.svg"); 
+    border: 2px solid var(--cor-primaria);
+    outline: none; 
+    transition: 0.5s;
+}
+
+.Search > input:hover{
+    background-image: url("../src/assets/Icones/Icone_Lupa2.svg"); 
+    border: 2px solid var(--cor-primaria);
+    outline: none; 
+    transition: 0.5s;
+}

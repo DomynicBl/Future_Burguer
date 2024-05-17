@@ -1,0 +1,22 @@
+
+main {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #F6F5F0;
+    background-color: var(--cor-terciaria);
+}
+  
+.root {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.colaboradores-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--cor-terciaria);
+}

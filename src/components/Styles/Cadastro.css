@@ -1,0 +1,117 @@
+.Cadastro {
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    background-color: var(--cor-terciaria);
+    justify-content: center;
+    align-items: center; 
+    font-family: 'FlameRegular', sans-serif;
+}
+
+.Area_Cadastro {
+    height: 70%;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--cor-sombra);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--cor-texto_3);
+    background-color: #fff;
+}
+.Titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Titulo > h1 {
+    font-size: 40px;
+    margin-top: 1rem;
+    color: var(--cor-texto_3);
+}
+
+.Titulo_Input {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    color: var(--cor-texto_3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Titulo_Input img {
+    height: 40px;
+    width: 40px;
+    margin: 0px 15px 0px 0px;
+}
+
+.Infos_Input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Infos_Input > input {
+    width: 65%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 9px 9px 9px 9px;
+    background-color: #EDEDED;
+    margin: 15px 0px 15px 0px;
+    border: 2px solid var(--cor-sombra);
+    transition: 0.5s;
+    font-family: 'FlameSans', sans-serif;
+}
+
+.Infos_Input > input:focus, input:hover,input:active{
+    border: 2px solid var(--cor-primaria);
+    outline: none; 
+    transition: 0.5s;
+}
+
+.Area_Cadastro button {
+    width: 69.3%;
+    height: 54px;
+    border-radius: 5px;
+    background-color: var(--cor-primaria);
+    border: 2px solid var(--cor-sombra);
+    transition: 0.5s;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'FlameRegular', sans-serif;
+}
+
+.Area_Cadastro button:hover {
+    background-color: var(--cor-secundaria);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.Area_Cadastro a {
+    color: var(--cor-texto_3);
+    font-size: 15px;
+    margin: -40px 0px 40px 0px;
+    text-decoration: none;
+    font-family: 'FlameSans', sans-serif;
+}
+
+.Complementar {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+}
+
+.Complementar img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
