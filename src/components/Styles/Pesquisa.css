@@ -1,0 +1,102 @@
+.Pesquisa_Colaboradores{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.Pesquisa_Colaboradores > input[type="text"] {
+  width: 35%;
+  height: 25px;
+  border-radius: 5px;
+  padding: 9px 0px 9px 36px;
+  background-color: #EDEDED;
+  margin: 0px 13px 0px 0px;
+  border: 2px solid var(--cor-sombra);
+  transition: 0.5s;
+  font-family: 'FlameSans', sans-serif;
+  background-image: url("../src/assets/Icones/Icone_Lupa.svg"); 
+  background-repeat: no-repeat;
+  background-position: 9px center;
+}
+
+.Pesquisa_Colaboradores > input[type="text"]:focus, 
+.Pesquisa_Colaboradores > input[type="text"]:hover {
+  background-image: url("../src/assets/Icones/Icone_Lupa2.svg"); 
+  border: 2px solid var(--cor-primaria);
+  outline: none; 
+  transition: 0.5s;
+}
+
+.Pesquisa_Colaboradores > select{
+  width: 20%;
+  height: 47px;
+  border-radius: 5px;
+  padding: 9px 9px 9px 9px;
+  border: 2px solid var(--cor-sombra);
+  font-family: 'FlameSans', sans-serif;
+  background-color: #EDEDED;
+  background-image: url("../src/assets/Icones/Icone_Filter.svg"); 
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.Pesquisa_Colaboradores > select:focus, select:hover{
+  background-image: url("../src/assets/Icones/Icone_Filter2.svg"); 
+  border: 2px solid var(--cor-primaria);
+  outline: none; 
+  transition: 0.5s;
+}
+
+.Pesquisa_Colaboradores > select::placeholder {
+  color: #999; 
+}
+
+.Pesquisa_Colaboradores > select::-ms-expand {
+  display: none;
+}
+
+.Pesquisa_Colaboradores > select {
+  -webkit-appearance: none;
+  -moz-appearance: none;   
+  appearance: none;
+}
+
+.Pesquisa_Colaboradores > select > option{
+  color: var(--cor-texto_3);
+  background-color: var(--cor-terciaria);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 500px){
+
+  .Pesquisa_Colaboradores{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      margin: 0px 0px 30px 0px;
+  }
+
+  .Pesquisa_Colaboradores > input {
+      width: 80%;
+      margin: 0px 0px 10px 0px;
+  }
+
+  .Pesquisa_Colaboradores > select {
+      width: 94%;
+      margin: 0px 0px 10px 0px;
+  }
+}

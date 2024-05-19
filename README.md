@@ -63,7 +63,7 @@
 - ### Junior Dias - (Back End):
   - [GitHub](https://github.com/diasjunio)
   - [Linkedin](https://www.linkedin.com/in/j%C3%BAnio-dias-967631152/)
-  - [Trabalho no projeto](https://github.com/diasjunio/future-burgurer)
+  - [Trabalho no projeto](https://github.com/diasjunio/future-burguer)
 
 - ### Laura Maia - (Agilista):
   - [Portifólio](https://www.behance.net/lauramaia9)
