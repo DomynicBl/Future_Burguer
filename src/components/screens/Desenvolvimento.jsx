@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "../Styles/Desenvolvimento.css";
 
 function Desenvolvimento() {
@@ -10,7 +11,11 @@ function Desenvolvimento() {
                 <p>Nos desculpe pelo inconveniente.</p>
                 <p>Estamos trabalhando para tornar esta página incrível. </p>
                 <p>Por favor, volte em breve!</p>
-                <button>Voltar</button>
+                <div className="btn-Voltar">
+                    <Link to="/">
+                        <button>Voltar</button>
+                    </Link>
+                </div>
             </div>
         </div>
     );

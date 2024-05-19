@@ -14,8 +14,6 @@ import Painel from './Painel.jsx';
 import Modal from './Modal.jsx';
 */
 
-import Test from '../test/test.jsx';
-
 
 
 function Gerenciamento() {

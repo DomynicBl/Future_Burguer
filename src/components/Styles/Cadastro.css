@@ -1,117 +1,239 @@
-.Cadastro {
-    width: 60vw;
+.main_Cadastro{
+    width: 100vw;
     height: 100vh;
+    background: var(--cor-terciaria);
     display: flex;
-    background-color: var(--cor-terciaria);
-    justify-content: center;
-    align-items: center; 
+    justify-content: flex-start;
+    align-items: center;
     font-family: 'FlameRegular', sans-serif;
+    font-weight: lighter;
+    background-image: url("../src/assets/Icones/Login_img.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: right;
 }
 
-.Area_Cadastro {
-    height: 70%;
+.area_Cadastro{
+    width: 50vw;
+    height: 00vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_Cadastro{
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    box-shadow: 1px 1px 20px var();
+    background-color: #fff; 
     border-radius: 10px;
+    color: var(--cor-texto_3);
     box-shadow: 0 0 15px var(--cor-sombra);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    margin: 0px 0px 0px 140px;
+}
+
+.card_Cadastro h1{
+    font-weight: 800;
     color: var(--cor-texto_3);
-    background-color: #fff;
-}
-.Titulo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 40px 0px 40px 0px;
 }
 
-.Titulo > h1 {
-    font-size: 40px;
-    margin-top: 1rem;
+.card_Cadastro h2{
+    font-weight: 800;
     color: var(--cor-texto_3);
-}
-
-.Titulo_Input {
-    font-size: 20px;
-    margin-bottom: 1rem;
-    color: var(--cor-texto_3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Titulo_Input img {
-    height: 40px;
-    width: 40px;
-    margin: 0px 15px 0px 0px;
-}
-
-.Infos_Input{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Infos_Input > input {
-    width: 65%;
-    height: 30px;
-    border-radius: 5px;
-    padding: 9px 9px 9px 9px;
-    background-color: #EDEDED;
-    margin: 15px 0px 15px 0px;
-    border: 2px solid var(--cor-sombra);
-    transition: 0.5s;
+    margin: 20px 0px 40px 0px;
     font-family: 'FlameSans', sans-serif;
 }
 
-.Infos_Input > input:focus, input:hover,input:active{
-    border: 2px solid var(--cor-primaria);
-    outline: none; 
-    transition: 0.5s;
+.card_Cadastro img{
+    width: 40px;
+    object-fit: cover;
+    margin: 0px 15px 0px 0px;
 }
 
-.Area_Cadastro button {
-    width: 69.3%;
-    height: 54px;
-    border-radius: 5px;
-    background-color: var(--cor-primaria);
-    border: 2px solid var(--cor-sombra);
-    transition: 0.5s;
-    color: #fff;
-    font-size: 17px;
-    font-family: 'FlameRegular', sans-serif;
+.titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.Area_Cadastro button:hover {
-    background-color: var(--cor-secundaria);
-    transition: 0.5s;
+.campos_Cadastro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    color: var(--cor-texto_2);
+}
+
+.campos_Cadastro input{
+    width: 90%;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 12pt;
+    border: 2px solid var(--cor-texto_3);
+    outline: none;
+    box-sizing: border-box;
+    background-color: var(--cor-texto);
+    background-image: none;
+    color: var(--cor-texto_2);
+}
+
+.campos_Cadastro input:hover, .campos_Cadastro select:focus, .campos_Cadastro select:active{
+    border: 2px solid var(--cor-primaria);  
+}
+
+.campos_Cadastro input::placeholder{
+    font-family: 'FlameSans', sans-serif;
+    color: var(--cor-texto_4);
+}
+
+.campos_Cadastro select{
+    width: 90%;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 12pt;
+    border: 2px solid var(--cor-texto_3);
+    outline: none;
+    box-sizing: border-box;
+    background-color: var(--cor-texto);
+    background-image: none;
+    color: var(--cor-texto_4);
+    font-family: 'FlameSans', sans-serif;
+    background-image: url(../src/assets/Icones/Icone_Filter.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+.campos_Cadastro select:hover, .campos_Cadastro select:focus, .campos_Cadastro select:active{
+    border: 2px solid var(--cor-primaria);  
+    background-image: url(../src/assets/Icones/Icone_Filter2.svg);
+}
+
+.campos_Cadastro > select::-ms-expand {
+    display: none;
+}
+.campos_Cadastro > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;   
+    appearance: none;
+}
+
+.campos_Cadastro > select > option{
+    color: var(--cor-texto_3);
+    background-color: var(--cor-terciaria);
+    font-size: 16px;
     cursor: pointer;
 }
 
-.Area_Cadastro a {
-    color: var(--cor-texto_3);
+.campos_Cadastro label{
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.full-box{
+    width: 100%;
+}
+
+.btn_Cadastro{
+    width: 90%;
+    padding: 16px 0px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    box-shadow: 1px 1px 20px var(--sombra-cor);
+    cursor: pointer;
+    font-family: 'FlameRegular', sans-serif;
+    font-weight: lighter;
     font-size: 15px;
-    margin: -40px 0px 40px 0px;
+}
+
+.btn_Cadastro:hover{
+    background-color: var(--cor-secundaria);
+}
+
+.cadastro a{
+    color: var(--cor-texto_3);
     text-decoration: none;
     font-family: 'FlameSans', sans-serif;
 }
 
-.Complementar {
-    height: 100%;
-    width: auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    right: 0;
+@media only screen and (max-width: 1281px) {
+    .card_Cadastro{
+        width: 65%;
+        margin: 0px 20px 0px 0px;
+    }
+
+    .card_Cadastro h1{
+        color: var(--cor-texto_3);
+        margin: 20px 0px 20px 0px;
+    }
 }
 
-.Complementar img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+@media only screen and (max-width: 1024px) {
+    .main_Cadastro{
+        background-image: none;
+        justify-content: center;
+    }
+
+    .area_Cadastro{
+        width: 65%;
+    }
+
+    .card_Cadastro{
+        width: 100%;
+    }
+  }
+  
+@media only screen and (max-width: 480px) {
+    .titulo{
+        font-size: 10px;
+    }
+
+    .area_Cadastro{
+        width: 85%;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .card_Cadastro{
+        width: 100%;
+        height: 680PX;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .card_Cadastro h1{
+        font-size: 25px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .card_Cadastro input{
+        height: 50px;
+    }
+
+    .card_Cadastro select{
+        height: 50px;
+    }
+
+    .card_Cadastro a{
+        font-size: 13px;
+       
+    }
+
+    .btn_Cadastro{
+        text-align: center;
+        height: 50px;
+    }
+  }

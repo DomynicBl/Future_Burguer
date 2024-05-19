@@ -1,6 +1,7 @@
 // Menu.jsx
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/Menu.css';
 
 function Menu() {
@@ -10,35 +11,35 @@ function Menu() {
         title: 'Painel',
         description: 'Painel de Controle',
         image: './src/assets/Icones/Icone_Painel.svg',
-        link: '#',
+        link: '/painel',
     },
     {
         id: 2,
         title: 'Colaboradores',
         description: 'Painel de Colaboradores',
         image: './src/assets/Icones/Icone_Colaboradores.svg',
-        link: '#',
+        link: '/',
     },
     {
         id: 3,
         title: 'Criar Formulário',
         description: 'Criação de Formulários',
         image: './src/assets/Icones/Icone_Formulario.svg',
-        link: '#',
+        link: '/desenvolvimento',
     },
     {
         id: 4,
         title: 'Criar Evento',
         description: 'Criação de Eventos',
         image: './src/assets/Icones/Icone_Evento.svg',
-        link: '#',
+        link: '/desenvolvimento',
     },
     {
         id: 5,
         title: 'Central',
         description: 'Central de Atendimento',
         image: './src/assets/Icones/Icone_Central.svg',
-        link: '#',
+        link: '/desenvolvimento',
     },
   ];
 
@@ -47,13 +48,13 @@ function Menu() {
     title: 'Sair',
     description: 'Sair do Sistema',
     image: './src/assets/Icones/Icone_Sair.svg',
-    link: '#',
+    link: '/login',
   };
 
   return (
     <nav className="MenuLateral">
         <div className="Logo">
-            <img  src="src/assets/Icones/Logo_Branco.svg" alt="Logo BK"/>
+        <Link to="desenvolvimento"><img  src="src/assets/Icones/Logo_Branco.svg" alt="Logo BK"/></Link>
         </div>
         <div className="Componentes">
             <ul className="Funcoes"> 
@@ -68,7 +69,7 @@ function Menu() {
         <div className="Sair">
             <div className="Linha">
                 <img src={sair.image} alt={sair.description}/>
-                <a href={sair.link}>{sair.title}</a>
+                <Link to={sair.link}>{sair.title}</Link>
             </div>
         </div>
     </nav>

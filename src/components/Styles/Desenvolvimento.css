@@ -32,8 +32,15 @@
     font-weight:lighter;
 }
 
-.Em_Desenvolvimento button{
-    width: 95%;
+.btn-Voltar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-Voltar button{
+    width: 450px;
     height: 54px;
     border-radius: 5px;
     background-color: var(--cor-primaria);
@@ -46,7 +53,7 @@
     margin: 50px 0px 20px 0px;
 }
 
-.Em_Desenvolvimento button:hover{
+.btn-Voltar button:hover{
     background-color: var(--cor-secundaria);
     transition: 0.5s;
     cursor: pointer;
@@ -64,7 +71,7 @@
         font-size: 15px;
     }
 
-    .Em_Desenvolvimento button{
-        width: 75%;
+    .btn-Voltar button{
+        width: 300px;
     }
   }
