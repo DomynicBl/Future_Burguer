@@ -1,22 +1,26 @@
 // App.jsx
 
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Gerenciamento from "./components/screens/Gerenciamento.jsx";
 import Login from "./components/screens/Login.jsx";
 import Cadastro from "./components/screens/Cadastro.jsx";
 import Desenvolvimento from "./components/screens/Desenvolvimento.jsx";
+import ProtegerRotas from "./ProtegerRotas.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Gerenciamento />} />
+        {/* Rotas Públicas */}
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/desenvolvimento" element={<Desenvolvimento />} />
+
+        {/* Rotas Protegidas */}
+        {/*<Route element={<ProtegerRotas />}>*/}
+          <Route path="/" element={<Gerenciamento />} />
+          <Route path="/desenvolvimento" element={<Desenvolvimento />} />
+        {/*</Route>*/}
       </Routes>
     </Router>
   );

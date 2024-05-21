@@ -1,27 +1,31 @@
+//Post_Cadastro.jsx
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const notify1 = () => toast.warn('Por favor, preencha todos os campos.' ,{position:"top-center", theme:"colored"})
-const notify2 = () => toast.warn('As senhas são diferentes.' ,{position:"top-center", theme:"colored"})
-const notify3 = () => toast.warn('A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.' ,{position:"top-center", theme:"colored"})
-const notify4 = () => toast.warn('Por favor, insira um CPF válido.!' ,{position:"top-center", theme:"colored"})
-const notify5 = () => toast.warn('Por favor, insira um email válido.' ,{position:"top-center", theme:"colored"})
-const notify6 = () => toast.success('Cadastro realizado com sucesso!' ,{position:"top-center", theme:"colored"})
-const notify7 = () => toast.error('Erro ao realizar o cadastro.' ,{position:"top-center", theme:"colored"})
-const notify8 = () => toast.error('Erro ao conectar com o servidor!' ,{position:"top-center", theme:"colored"})
+// Funções de notificação
+const notify1 = () => toast.warn('Por favor, preencha todos os campos.', { position: "top-center", theme: "colored" });
+const notify2 = () => toast.warn('As senhas são diferentes.', { position: "top-center", theme: "colored" });
+const notify3 = () => toast.warn('A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.', { position: "top-center", theme: "colored" });
+const notify4 = () => toast.warn('Por favor, insira um CPF válido.', { position: "top-center", theme: "colored" });
+const notify5 = () => toast.warn('Por favor, insira um email válido.', { position: "top-center", theme: "colored" });
+const notify6 = () => toast.success('Cadastro realizado com sucesso!', { position: "top-center", theme: "colored" });
+const notify7 = (message) => toast.error(<div>Erro ao realizar o cadastro:<br />{message}</div>, { position: "top-center", theme: "colored" });
+const notify8 = () => toast.error('Erro ao conectar com o servidor!', { position: "top-center", theme: "colored" });
 
 function Post_Cadastro() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [gerente, setGerente] = useState(''); //Somente gerentes podem criar uma conta
+    const [gerente, setGerente] = useState(''); // Somente gerentes podem criar uma conta
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
     const [filial, setFilial] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
-    const validatePassword = (password) => { //Validar os caracteres da senha
+    const validatePassword = (password) => {
         const minLength = 8;
         const hasUpperCase = /[A-Z]/.test(password);
         const hasLowerCase = /[a-z]/.test(password);
@@ -30,7 +34,7 @@ function Post_Cadastro() {
         return password.length >= minLength && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar;
     };
 
-    const validateEmail = (email) => { //Validar se o email é possivel
+    const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
@@ -47,34 +51,34 @@ function Post_Cadastro() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        if (!nome || !email || !gerente || !senha || !confirmarSenha || !filial) { //Verificar se todos os campos estão preenchidos
-            {notify1()}
+        if (!nome || !email || !gerente || !senha || !confirmarSenha || !filial) {
+            notify1();
             return;
         }
 
         if (senha !== confirmarSenha) {
-            {notify2()}
+            notify2();
             return;
         }
 
         if (!validatePassword(senha)) {
-            {notify3()}
+            notify3();
             return;
         }
 
-        if (gerente.length !== 11 || isNaN(parseInt(gerente)) || !isValidCPF(gerente)) { //Verificar se o CPF é possivel
-            {notify4()}
+        if (gerente.length !== 11 || isNaN(parseInt(gerente)) || !isValidCPF(gerente)) {
+            notify4();
             return;
         }
 
         if (!validateEmail(email)) {
-            {notify5()}
+            notify5();
             return;
         }
 
         const userData = {
             name: nome,
-            email,
+            email: email,
             cpf: gerente,
             password: senha,
             role: 'Gerente',
@@ -84,7 +88,7 @@ function Post_Cadastro() {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://localhost:3000/users', {
+            const response = await fetch('https://future-burguer-novo.onrender.com/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -92,18 +96,27 @@ function Post_Cadastro() {
                 body: JSON.stringify(userData)
             });
 
+            const data = await response.json();
+            //console.log("Resposta da API", data);
+
             setIsLoading(false);
 
             if (response.ok) {
-                {notify6()}
-                navigate('/login'); // Redirecione para a página de login
+                notify6();
+                setTimeout(() => { // Dalay para exibir a mensagem de sucesso
+                    navigate('/login'); // Redirecionar para a página de login
+                }, 3000); 
             } else {
-                {notify7()}
+                if (data.message) {
+                    notify7(data.message);
+                } else {
+                    notify7('Erro desconhecido.');
+                }
             }
         } catch (error) {
             setIsLoading(false);
             console.error('Erro:', error);
-            {notify8()}
+            notify8();
         }
     };
 
