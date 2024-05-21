@@ -3,7 +3,7 @@ import React from 'react';
 import '../Styles/Gerenciamento.css';
 
 import Menu from './Menu.jsx';
-import Colaboradores from './Colaboradores.jsx';
+import Painel from './Painel.jsx';
 
 function Gerenciamento() {
   return (
@@ -12,7 +12,7 @@ function Gerenciamento() {
         <Menu />
       </nav>
       <main className='colaboradores-container'>
-          <Colaboradores />
+          <Painel />
       </main>
     </div>
   );

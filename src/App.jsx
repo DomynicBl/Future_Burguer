@@ -3,6 +3,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Gerenciamento from "./components/screens/Gerenciamento.jsx";
+import Gerenciamento2 from "./components/screens/Gerenciamento2.jsx";
 import Login from "./components/screens/Login.jsx";
 import Cadastro from "./components/screens/Cadastro.jsx";
 import Desenvolvimento from "./components/screens/Desenvolvimento.jsx";
@@ -20,6 +21,7 @@ function App() {
         {/*<Route element={<ProtegerRotas />}>*/}
           <Route path="/" element={<Gerenciamento />} />
           <Route path="/desenvolvimento" element={<Desenvolvimento />} />
+          <Route path="/painel" element={<Gerenciamento2 />} />
         {/*</Route>*/}
       </Routes>
     </Router>
