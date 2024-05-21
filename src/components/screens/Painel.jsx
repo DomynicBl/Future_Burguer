@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import chroma from 'chroma-js';
+import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 import '../Styles/Painel.css';
 import Pesquisa from '../screens/Pesquisa.jsx';
 
@@ -15,10 +17,10 @@ function Colaboradores() {
       cargo: 'Gerente Drive Thru',
       image: '../src/assets/Colaboradores/Gabriel_Caique.svg',
       tarefas_total: '1200',
-      tarefas_feitas: '950',
+      tarefas_feitas: '1115',
       conquistas: '300',
-      inicio: '01/02/2021',
-      final: '01/02/2022',
+      inicio: '02/21',
+      final: '02/22',
     },
     {
       id: 2,
@@ -27,10 +29,10 @@ function Colaboradores() {
       cargo: 'Atendente',
       image: '../src/assets/Colaboradores/Tiffany_Kanesiro.svg',
       tarefas_total: '1100',
-      tarefas_feitas: '870',
+      tarefas_feitas: '600',
       conquistas: '280',
-      inicio: '05/01/2021',
-      final: '05/01/2022',
+      inicio: '08/21',
+      final: '03/22',
     },
     {
       id: 3,
@@ -40,9 +42,9 @@ function Colaboradores() {
       image: '../src/assets/Colaboradores/Nicolas_Fresch.svg',
       tarefas_total: '1350',
       tarefas_feitas: '1020',
-      conquistas: '330',
-      inicio: '03/03/2021',
-      final: '03/03/2022',
+      conquistas: '402',
+      inicio: '03/21',
+      final: '03/22',
     },
     {
       id: 4,
@@ -51,10 +53,10 @@ function Colaboradores() {
       cargo: 'Atendente',
       image: '../src/assets/Colaboradores/Same_Pinho.svg',
       tarefas_total: '980',
-      tarefas_feitas: '740',
+      tarefas_feitas: '247',
       conquistas: '240',
-      inicio: '07/04/2021',
-      final: '07/04/2022',
+      inicio: '04/22',
+      final: '04/24',
     },
     {
       id: 5,
@@ -65,8 +67,8 @@ function Colaboradores() {
       tarefas_total: '1150',
       tarefas_feitas: '890',
       conquistas: '260',
-      inicio: '09/05/2021',
-      final: '09/05/2022',
+      inicio: '05/21',
+      final: '05/23',
     },
     {
       id: 6,
@@ -76,9 +78,9 @@ function Colaboradores() {
       image: '../src/assets/Colaboradores/Lucas_Kaminaga.svg',
       tarefas_total: '1300',
       tarefas_feitas: '980',
-      conquistas: '320',
-      inicio: '11/06/2021',
-      final: '11/06/2022',
+      conquistas: '253',
+      inicio: '06/20',
+      final: '06/22',
     },
     {
       id: 7,
@@ -89,8 +91,8 @@ function Colaboradores() {
       tarefas_total: '1050',
       tarefas_feitas: '810',
       conquistas: '270',
-      inicio: '13/07/2021',
-      final: '13/07/2022',
+      inicio: '07/19',
+      final: '07/22',
     },
     {
       id: 8,
@@ -101,8 +103,8 @@ function Colaboradores() {
       tarefas_total: '1250',
       tarefas_feitas: '940',
       conquistas: '310',
-      inicio: '15/08/2021',
-      final: '15/08/2022',
+      inicio: '08/19',
+      final: '08/23',
     },
     {
       id: 9,
@@ -111,16 +113,53 @@ function Colaboradores() {
       cargo: 'Instrutor',
       image: '../src/assets/Colaboradores/Kim_Tomada.svg',
       tarefas_total: '1400',
-      tarefas_feitas: '1050',
-      conquistas: '350',
-      inicio: '17/09/2021',
-      final: '17/09/2022',
+      tarefas_feitas: '1400',
+      conquistas: '664',
+      inicio: '09/21',
+      final: '09/24',
     },
   ];
 
   useEffect(() => {
     setFilteredColaboradores(colaboradores);
   }, []);
+
+  const calcularPorcentagem = (feitas, total) => {
+    return (feitas / total) * 100;
+  };
+
+  const getBarraCor = (porcentagem) => {
+    return chroma.scale(['yellow', 'lightgreen', 'green'])(porcentagem / 100).hex();
+  };
+
+  const colaboradoresDestaque = colaboradores
+    .sort((a, b) => b.conquistas - a.conquistas)
+    .slice(0, 5);
+
+  const categorias = {
+    abaixo: 0,
+    media: 0,
+    acima: 0,
+  };
+
+  filteredColaboradores.forEach(colaborador => {
+    const porcentagem = calcularPorcentagem(colaborador.tarefas_feitas, colaborador.tarefas_total);
+    if (porcentagem < 60) {
+      categorias.abaixo += 1;
+    } else if (porcentagem < 75) {
+      categorias.media += 1;
+    } else {
+      categorias.acima += 1;
+    }
+  });
+
+  const data = [
+    { name: 'Abaixo do esperado', value: categorias.abaixo },
+    { name: 'Na média', value: categorias.media },
+    { name: 'Superou expectativas', value: categorias.acima },
+  ];
+
+  const COLORS = ['#FF8042', '#FFBB28', '#00C49F'];
 
   return (
     <div className="Gerenciamento">
@@ -129,65 +168,87 @@ function Colaboradores() {
           <h1>Painel</h1>
           <div className="Perfil_Gerente">
             <h2>Gerente</h2>
-            <img src="../src/assets/Colaboradores/Gerente.svg" alt="Perfil"/>
+            <img src="../src/assets/Colaboradores/Gerente.svg" alt="Perfil" />
           </div>
         </div>
         <Pesquisa colaboradores={colaboradores} setFilteredColaboradores={setFilteredColaboradores} />
       </div>
 
       <div className="Painel">
-        <div className="Lista_Colaboradores">
-            <div className='Titulo_Painel'>
-                <h1>Tarefas realizadas na semana</h1>
-            </div>
-            <ul className="Card_Colaboradores"> 
+        <div className="Lista_Colaboradores2">
+          <div className='Titulo_Painel'>
+            <h1>Tarefas realizadas na semana</h1>
+          </div>
+          <ul className="Card_Colaboradores2">
             {filteredColaboradores.length > 0 ? (
-                filteredColaboradores.map(item => (
-                <li key={item.id}>
+              filteredColaboradores.map(item => {
+                const porcentagem = calcularPorcentagem(item.tarefas_feitas, item.tarefas_total);
+                const barraCor = getBarraCor(porcentagem);
+                return (
+                  <li key={item.id}>
                     <div className="Foto_colaborador">
-                      <img src={item.image} alt={item.description}/>
+                      <img src={item.image} alt={item.description} />
                     </div>
                     <div className="Perfil_Colaborador">
                       <p className="Nome_Colaborador">{item.name}</p>
-                    <div className="infos">
-                      <p>78% das tarefas</p>
-                      <div className='Barra_Progresso'/>
-                        <div></div>
+                      <div className="infos2">
+                        <p>{porcentagem.toFixed(2)}% das tarefas</p>
+                        <div className='Barra_Progresso'>
+                          <div style={{ width: `${porcentagem}%`, backgroundColor: barraCor }}></div>
+                        </div>
                       </div>
                     </div>
-                </li>
-                ))
+                  </li>
+                );
+              })
             ) : (
-                <li>Nenhum colaborador encontrado.</li>
+              <li>Nenhum colaborador encontrado.</li>
             )}
-            </ul>
+          </ul>
         </div>
         <div className="Dashboard">
           <div className="Desempenho_Colaborador">
             <div className="Grafico">
               <h1>Desempenho</h1>
-              <div className="Grafico_Pizza"/>
+              <PieChart width={400} height={400}>
+                <Pie
+                  data={data}
+                  cx={200}
+                  cy={200}
+                  labelLine={false}
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                >
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip />
+                <Legend />
+              </PieChart>
               <div className="legenda">
                 <div className="desempenho_abaixo">
                   <div className="texto">
-                    <div className="referencia"/>
+                    <div className="referencia" />
                     <h2>Abaixo do esperado</h2>
                   </div>
-                  <p>5%</p>
+                  <p>{(categorias.abaixo / filteredColaboradores.length * 100).toFixed(2)}%</p>
                 </div>
                 <div className="desempenho_medio">
                   <div className="texto">
-                    <div className="referencia"/>
+                    <div className="referencia" />
                     <h2>Na média</h2>
                   </div>
-                  <p>22%</p>
+                  <p>{(categorias.media / filteredColaboradores.length * 100).toFixed(2)}%</p>
                 </div>
                 <div className="desempenho_acima">
                   <div className="texto">
-                    <div className="referencia"/>
+                    <div className="referencia" />
                     <h2>Superou expectativas</h2>
                   </div>
-                  <p>35%</p>
+                  <p>{(categorias.acima / filteredColaboradores.length * 100).toFixed(2)}%</p>
                 </div>
               </div>
             </div>
@@ -195,27 +256,21 @@ function Colaboradores() {
               <h1>Colaboradores destaque</h1>
               <div className="destaques">
                 <h2>Nome</h2>
-                <p>⭐ Lucas Kaminaga</p>
-                <p>⭐ test</p>
-                <p>⭐ test</p>
-                <p>⭐ test</p>
-                <p>⭐ test</p>
+                {colaboradoresDestaque.map(colab => (
+                  <p key={colab.id}>⭐ {colab.name}</p>
+                ))}
               </div>
               <div className="conquistas">
                 <h2>Conquistas</h2>
-                <p>275</p>
-                <p>test2</p>
-                <p>test2</p>
-                <p>test2</p>
-                <p>test2</p>
+                {colaboradoresDestaque.map(colab => (
+                  <p key={colab.id}>{colab.conquistas}</p>
+                ))}
               </div>
               <div className="periodo">
                 <h2>Período</h2>
-                <p>01/05 - 02/10</p>
-                <p>test3</p>
-                <p>test3</p>
-                <p>test3</p>
-                <p>test3</p>
+                {colaboradoresDestaque.map(colab => (
+                  <p key={colab.id}>{colab.inicio} - {colab.final}</p>
+                ))}
               </div>
             </div>
           </div>
