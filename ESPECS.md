@@ -26,9 +26,9 @@
 ### Quando o usuário tem o seu login aprovado, ele é automaticamente redirecionado para a tela principal.
 
 <div style="display:flex; justify-content:center; margin-top: 70px;">
-    <img src="./src/assets/capturas/login_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/login_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/login_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
+    <img src="./src/assets/capturas/login_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/login_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/login_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
 </div>
 
 <br/>
@@ -64,14 +64,14 @@
 ### Ao clicar no botão "`+`", é aberto um modal pop-up com mais informações sobre o colaborador em questão, como suas habilidades, sonhos, metas, etc.
 
 <div style="display:flex; justify-content:center; margin-top: 70px;">
-    <img src="./src/assets/capturas/colab_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/colab_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/colab_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
+    <img src="./src/assets/capturas/colab_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/colab_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/colab_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
 </div>
 <div style="display:flex; justify-content:center; margin-top: 70px;">
-    <img src="./src/assets/capturas/modal_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/modal_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/modal_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
+    <img src="./src/assets/capturas/modal_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/modal_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/modal_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
 </div>
 
 <br/>
@@ -81,7 +81,7 @@
 ### A tela de painel, assim como a tela de colaboradores, é composta por três áreas: o menu lateral, a área de pesquisa e a área de dashboards. Essa área é subdividida em outras três partes. A primeira é uma lista de todos os funcionários e o seu progresso na realização das atividades semanais, exibido no formato de uma barra de progresso que muda de amarelo para verde dependendo da porcentagem de preenchimento. A segunda área é um gráfico em formato de pizza, que calcula a média das tarefas realizadas pela equipe e apresenta a porcentagem de colaboradores abaixo da média, na média e acima da média, possibilitando um melhor feedback do time. Por fim, a terceira área é um ranking com os cinco colaboradores com o maior número de conquistas, incluindo também o intervalo de tempo em que essas conquistas foram ganhas.
 
 <div style="display:flex; justify-content:center; margin-top: 70px;">
-    <img src="./src/assets/capturas/painel_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
+    <img src="./src/assets/capturas/painel_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
 </div>
 
 <br/>
@@ -91,9 +91,9 @@
 ### A tela de desenvolvimento é uma tela padrão que é exibida caso o usuário tente acessar alguma página que ainda está em desenvolvimento.
 
 <div style="display:flex; justify-content:center; margin-top: 70px;">
-    <img src="./src/assets/capturas/erro_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/erro_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
-    <img src="./src/assets/capturas/erro_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 400px;">
+    <img src="./src/assets/capturas/erro_tab.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/erro_pc.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
+    <img src="./src/assets/capturas/erro_mob.png" alt="Exemplo do Projeto no Notebook" style="max-width: auto; height: 300px;">
 </div>
 
 <br/>

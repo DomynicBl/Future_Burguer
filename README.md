@@ -13,6 +13,7 @@
   - [Segunda Fase](#segunda-fase)
 - [Integrantes da equipe](#integrantes-da-equipe)
 
+- [Documentação das Funcionalidades](./ESPECS.md)
 <br>
 
 ## **Motivação Pessoal:**
