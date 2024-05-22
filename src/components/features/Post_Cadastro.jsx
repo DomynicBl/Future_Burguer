@@ -127,7 +127,7 @@ function Post_Cadastro() {
                 <div className="area_Cadastro">
                     <div className="card_Cadastro">
                         <div className="titulo">
-                            <a href=""><img src="../src/assets/Icones/Logo_Colorido.svg" alt="Logo" /></a>
+                            <a href=""><img src="../src/assets/icones/Logo_Colorido.svg" alt="Logo" /></a>
                             <h1>Gerenciamento</h1>
                         </div>
                         <h2>Cadastro</h2>

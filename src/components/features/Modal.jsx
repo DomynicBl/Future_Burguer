@@ -22,11 +22,11 @@ export default function Modal({ isOpen, setOpen, colaborador }) {
             <div className='Perfil_Colaborador'>
               <p className='Nome_Colaborador'>{colaborador.name}</p>
               <div className='infos'>
-                <img src='../src/assets/Icones/Icone_Turno.svg' alt='Turno' />
+                <img src='../src/assets/icones/Icone_Turno.svg' alt='Turno' />
                 <p>{colaborador.turno}</p>
               </div>
               <div className='infos'>
-                <img src='../src/assets/Icones/Icone_Cargo.svg' alt='Cargo' />
+                <img src='../src/assets/icones/Icone_Cargo.svg' alt='Cargo' />
                 <p>{colaborador.cargo}</p>
               </div>
             </div>

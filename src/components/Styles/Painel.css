@@ -35,7 +35,7 @@
     width: 100%; 
 }
 
-.Lista_Colaboradores::-webkit-scrollbar {
+.Lista_Colaboradores2::-webkit-scrollbar {
     display: none;
 }
 
@@ -54,16 +54,18 @@
 }
 
 .Card_Colaboradores2{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
     gap: 24px;
     column-gap: 32px;
     margin: 10px 0px 0px 0px;
 }
 
 .Card_Colaboradores2 li {
-    width: 95%;
+    width: 70%;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -101,7 +103,6 @@
 
 .Barra_Progresso div {
     height: 100%;
-
 }
 
 .Dashboard {
@@ -305,6 +306,16 @@
     .destaques p, .conquistas p, .periodo p{
         font-size: 12px;
     }
+
+
+    .Card_Colaboradores2 li {
+        width: 70%;
+    }
+
+    .Barra_Progresso {
+        width: 55%;
+    }
+    
 
 }
 

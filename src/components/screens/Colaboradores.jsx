@@ -32,56 +32,56 @@ function Colaboradores() {
       name: 'Tiffany Kanesiro',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Tiffany_Kanesiro.svg',
+      image: '../src/assets/colaboradores/Tiffany_Kanesiro.svg',
     },
     {
       id: 3,
       name: 'Nicolas Fresch',
       turno: 'Manhã',
       cargo: 'Sub gerente',
-      image: '../src/assets/Colaboradores/Nicolas_Fresch.svg',
+      image: '../src/assets/colaboradores/Nicolas_Fresch.svg',
     },
     {
       id: 4,
       name: 'Same Pinho',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Same_Pinho.svg',
+      image: '../src/assets/colaboradores/Same_Pinho.svg',
     },
     {
       id: 5,
       name: 'Otavio Baesse',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Otavio_Baesse.svg',
+      image: '../src/assets/colaboradores/Otavio_Baesse.svg',
     },
     {
       id: 6,
       name: 'Lucas Kaminaga',
       turno: 'Noite',
       cargo: 'Chapeiro',
-      image: '../src/assets/Colaboradores/Lucas_Kaminaga.svg',
+      image: '../src/assets/colaboradores/Lucas_Kaminaga.svg',
     },
     {
       id: 7,
       name: 'Milena Louzada',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Milena_Louzada.svg',
+      image: '../src/assets/colaboradores/Milena_Louzada.svg',
     },
     {
       id: 8,
       name: 'Alice Munhoz',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Alice_Munhoz.svg',
+      image: '../src/assets/colaboradores/Alice_Munhoz.svg',
     },
     {
       id: 9,
       name: 'Kim Tomada',
       turno: 'Noite',
       cargo: 'Instrutor',
-      image: '../src/assets/Colaboradores/Kim_Tomada.svg',
+      image: '../src/assets/colaboradores/Kim_Tomada.svg',
     },
   ];
 
@@ -96,7 +96,7 @@ function Colaboradores() {
           <h1>Colaboradores</h1>
           <div className="Perfil_Gerente">
             <h2>Gerente</h2>
-            <img src="../src/assets/Colaboradores/Gerente.svg" alt="Perfil"/>
+            <img src="../src/assets/colaboradores/Gerente.svg" alt="Perfil"/>
           </div>
         </div>
         <Pesquisa colaboradores={colaboradores} setFilteredColaboradores={setFilteredColaboradores} /> {/* Altere a chamada */}
@@ -113,11 +113,11 @@ function Colaboradores() {
                 <div className="Perfil_Colaborador">
                   <p className="Nome_Colaborador">{item.name}</p>
                   <div className="infos">
-                    <img src="../src/assets/Icones/Icone_Turno.svg" alt="Turno"/>
+                    <img src="../src/assets/icones/Icone_Turno.svg" alt="Turno"/>
                     <p>{item.turno}</p>
                   </div>
                   <div className="infos">
-                    <img src="../src/assets/Icones/Icone_Cargo.svg" alt="Cargo"/>
+                    <img src="../src/assets/icones/Icone_Cargo.svg" alt="Cargo"/>
                     <p>{item.cargo}</p>
                   </div>
                 </div>

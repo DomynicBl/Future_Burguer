@@ -15,7 +15,7 @@ function Colaboradores() {
       name: 'Gabriel Caique',
       turno: 'Noite',
       cargo: 'Gerente Drive Thru',
-      image: '../src/assets/Colaboradores/Gabriel_Caique.svg',
+      image: '../src/assets/colaboradores/Gabriel_Caique.svg',
       tarefas_total: '1200',
       tarefas_feitas: '1115',
       conquistas: '300',
@@ -27,7 +27,7 @@ function Colaboradores() {
       name: 'Tiffany Kanesiro',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Tiffany_Kanesiro.svg',
+      image: '../src/assets/colaboradores/Tiffany_Kanesiro.svg',
       tarefas_total: '1100',
       tarefas_feitas: '600',
       conquistas: '280',
@@ -39,7 +39,7 @@ function Colaboradores() {
       name: 'Nicolas Fresch',
       turno: 'Manhã',
       cargo: 'Sub gerente',
-      image: '../src/assets/Colaboradores/Nicolas_Fresch.svg',
+      image: '../src/assets/colaboradores/Nicolas_Fresch.svg',
       tarefas_total: '1350',
       tarefas_feitas: '1020',
       conquistas: '402',
@@ -51,7 +51,7 @@ function Colaboradores() {
       name: 'Same Pinho',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Same_Pinho.svg',
+      image: '../src/assets/colaboradores/Same_Pinho.svg',
       tarefas_total: '980',
       tarefas_feitas: '247',
       conquistas: '240',
@@ -63,7 +63,7 @@ function Colaboradores() {
       name: 'Otavio Baesse',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Otavio_Baesse.svg',
+      image: '../src/assets/colaboradores/Otavio_Baesse.svg',
       tarefas_total: '1150',
       tarefas_feitas: '890',
       conquistas: '260',
@@ -75,7 +75,7 @@ function Colaboradores() {
       name: 'Lucas Kaminaga',
       turno: 'Noite',
       cargo: 'Chapeiro',
-      image: '../src/assets/Colaboradores/Lucas_Kaminaga.svg',
+      image: '../src/assets/colaboradores/Lucas_Kaminaga.svg',
       tarefas_total: '1300',
       tarefas_feitas: '980',
       conquistas: '253',
@@ -87,7 +87,7 @@ function Colaboradores() {
       name: 'Milena Louzada',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Milena_Louzada.svg',
+      image: '../src/assets/colaboradores/Milena_Louzada.svg',
       tarefas_total: '1050',
       tarefas_feitas: '810',
       conquistas: '270',
@@ -99,7 +99,7 @@ function Colaboradores() {
       name: 'Alice Munhoz',
       turno: 'Noite',
       cargo: 'Atendente',
-      image: '../src/assets/Colaboradores/Alice_Munhoz.svg',
+      image: '../src/assets/colaboradores/Alice_Munhoz.svg',
       tarefas_total: '1250',
       tarefas_feitas: '940',
       conquistas: '310',
@@ -111,7 +111,7 @@ function Colaboradores() {
       name: 'Kim Tomada',
       turno: 'Noite',
       cargo: 'Instrutor',
-      image: '../src/assets/Colaboradores/Kim_Tomada.svg',
+      image: '../src/assets/colaboradores/Kim_Tomada.svg',
       tarefas_total: '1400',
       tarefas_feitas: '1400',
       conquistas: '664',
@@ -168,7 +168,7 @@ function Colaboradores() {
           <h1>Painel</h1>
           <div className="Perfil_Gerente">
             <h2>Gerente</h2>
-            <img src="../src/assets/Colaboradores/Gerente.svg" alt="Perfil" />
+            <img src="../src/assets/colaboradores/Gerente.svg" alt="Perfil" />
           </div>
         </div>
         <Pesquisa colaboradores={colaboradores} setFilteredColaboradores={setFilteredColaboradores} />
@@ -214,10 +214,10 @@ function Colaboradores() {
                 <Pie
                   data={data}
                   cx={200}
-                  cy={200}
+                  cy={150}
                   labelLine={false}
                   label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                  outerRadius={80}
+                  outerRadius={90}
                   fill="#8884d8"
                   dataKey="value"
                 >

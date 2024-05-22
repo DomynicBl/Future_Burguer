@@ -47,6 +47,13 @@
   margin-left: 40px ;
 }
 
+.Funcoes img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 40px ;
+}
+
 .Funcoes li{
   color: var(--cor-texto);
   padding: 10px;
@@ -54,6 +61,8 @@
   align-items: center;
   transition: 0.5s;
 }
+
+
 
 .Funcoes li:hover{
   background-color: var(--cor-secundaria);

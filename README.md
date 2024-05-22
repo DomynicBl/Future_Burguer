@@ -71,8 +71,9 @@
   - [Trabalho no projeto](https://miro.com/welcomeonboard/ZUtpUTlIaGY3eUtxb3kxQVNNSGdkUjd5SmJZTjlUTGhiczZ0VVAwM2JRVWZtYkhhVlVodDJjUU5NOXNiMkthZnwzNDU4NzY0NTUxNTA5Mjk0ODMyfDI=?share_link_id=40077264703)
 
 - ### Ravi Dornelas - (Mobile):
-  - [GitHub]()
+  - [GitHub](https://github.com/rav1silva)
   - [Linkedin](https://www.linkedin.com/in/ravi-dornelas-e-silva-b51017232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+  - [Trabalho no projeto](https://github.com/rav1silva/BKprojeto-main--1-)
 
 - ### Tiago Dourado - (Dados):
   - [Linkedin](https://www.linkedin.com/in/tiagodourado?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)

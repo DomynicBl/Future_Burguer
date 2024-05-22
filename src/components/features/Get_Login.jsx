@@ -150,7 +150,7 @@ function Get_Login() {
                 <div className="area_login">
                     <div className="card_login">
                         <div className="titulo">
-                            <a href=""><img src="../src/assets/Icones/Logo_Colorido.svg" alt="Logo" /></a>
+                            <a href=""><img src="../src/assets/icones/Logo_Colorido.svg" alt="Logo" /></a>
                             <h1>Gerenciamento</h1>
                         </div>
                         <h2>Login</h2>
